@@ -2,34 +2,35 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Tenho uma pergunta 💚</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite Especial 🦖💚</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(#dfffe6, #ffffff);
   text-align: center;
-  background: linear-gradient(#c8facc, #ffffff);
-  overflow-x: hidden;
+  padding-bottom: 280px;
 }
 
-/* HISTÓRIA */
+/* TEXTO */
 .story {
-  padding: 40px 20px;
   max-width: 500px;
-  margin: auto;
+  margin: 40px auto;
+  padding: 20px;
   color: #2f6b2f;
 }
 
 h1 {
-  color: #3a8f3a;
+  color: #2e8b57;
 }
 
 /* BOTÕES */
 .buttons {
   margin-top: 30px;
-  height: 180px;
   position: relative;
+  height: 160px;
 }
 
 button {
@@ -41,7 +42,7 @@ button {
 }
 
 #yes {
-  background-color: #4CAF50;
+  background-color: #3cb371;
   color: white;
 }
 
@@ -51,29 +52,27 @@ button {
   position: absolute;
 }
 
-/* CENA INFERIOR */
+/* IMAGEM INFERIOR */
 .scene {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  height: 220px;
-  background-image: url("fundo-dinossauros.png");
-  background-size: cover;
-  background-position: center;
+  height: 260px;
+
+  background-image: url("cena-jurassica.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+
+  pointer-events: none;
 }
 
-/* PERSONAGENS */
-.characters {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.characters img {
-  height: 140px;
+/* MOBILE */
+@media (max-width: 600px) {
+  .scene {
+    height: 220px;
+  }
 }
 </style>
 </head>
@@ -82,15 +81,18 @@ button {
 
 <div class="story">
   <h1>Era uma vez… 🦕✨</h1>
+
   <p>
     Em um mundo cheio de aventuras, duas pessoas caminhavam juntas,
     rindo, competindo e se divertindo.
   </p>
+
   <p>
-    Entre dinossauros, grama verde e sol curitibano,
+    Entre dinossauros, grama verde e um caldo de cana,
     surgiu uma pergunta impossível de ignorar…
   </p>
-  <h2>VAMOS IR CAMINHAR NO PARQUE? 💚</h2>
+
+  <h2>Vamos ir caminhar no parque? 💚</h2>
 
   <div class="buttons">
     <button id="yes" onclick="yesClick()">SIM 🦖💖</button>
@@ -98,12 +100,8 @@ button {
   </div>
 </div>
 
-.hero {
-  height: 50vh;
-  background-image: url("cena-jurassica.png");
-  background-size: cover;
-  background-position: center;
-}
+<div class="scene"></div>
+
 <script>
 function moveButton() {
   const no = document.getElementById("no");
@@ -115,10 +113,10 @@ function moveButton() {
 
 function yesClick() {
   document.body.innerHTML = `
-    <div style="padding:40px;">
+    <div style="padding:40px; font-family:'Comic Sans MS', cursive; color:#2e8b57;">
       <h1>💚 EU SABIA!!! 💚</h1>
-      <p>Então está decidido…</p>
-      <p>Nosssa corrida jurássica está confirmado 🦖✨</p>
+      <p>Então está combinado…</p>
+      <p>Nosso date no parque está confirmado 🦖✨</p>
     </div>
   `;
 }
