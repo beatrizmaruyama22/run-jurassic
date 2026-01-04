@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tenho uma pergunta 💚</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  background: linear-gradient(#c8facc, #ffffff);
+  overflow-x: hidden;
+}
+
+/* HISTÓRIA */
+.story {
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: auto;
+  color: #2f6b2f;
+}
+
+h1 {
+  color: #3a8f3a;
+}
+
+/* BOTÕES */
+.buttons {
+  margin-top: 30px;
+  height: 180px;
+  position: relative;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#no {
+  background-color: #999;
+  color: white;
+  position: absolute;
+}
+
+/* CENA INFERIOR */
+.scene {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 220px;
+  background-image: url("fundo-dinossauros.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* PERSONAGENS */
+.characters {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.characters img {
+  height: 140px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="story">
+  <h1>Era uma vez… 🦕✨</h1>
+  <p>
+    Em um mundo cheio de aventuras, duas pessoas caminhavam juntas,
+    rindo, competindo e se divertindo.
+  </p>
+  <p>
+    Entre dinossauros, grama verde e sol curitibano,
+    surgiu uma pergunta impossível de ignorar…
+  </p>
+  <h2>VAMOS IR CAMINHAR NO PARQUE? 💚</h2>
+
+  <div class="buttons">
+    <button id="yes" onclick="yesClick()">SIM 🦖💖</button>
+    <button id="no" onmouseover="moveButton()">NÃO 😶</button>
+  </div>
+</div>
+
+<div class="scene">
+  <div class="characters">
+   cena-jurassica.png
+  </div>
+</div>
+
+<script>
+function moveButton() {
+  const no = document.getElementById("no");
+  const x = Math.random() * 250;
+  const y = Math.random() * 120;
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+}
+
+function yesClick() {
+  document.body.innerHTML = `
+    <div style="padding:40px;">
+      <h1>💚 EU SABIA!!! 💚</h1>
+      <p>Então está decidido…</p>
+      <p>Nosssa corrida jurássica está confirmado 🦖✨</p>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
