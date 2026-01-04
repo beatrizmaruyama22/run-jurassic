@@ -98,12 +98,12 @@ button {
   </div>
 </div>
 
-<div class="scene">
-  <div class="characters">
-   cena-jurassica.png
-  </div>
-</div>
-
+.hero {
+  height: 50vh;
+  background-image: url("cena-jurassica.png");
+  background-size: cover;
+  background-position: center;
+}
 <script>
 function moveButton() {
   const no = document.getElementById("no");
